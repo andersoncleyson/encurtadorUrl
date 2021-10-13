@@ -21,7 +21,7 @@ router.post('/shorten', async (req, res) => {
   // Check a url
   if (validUrl.isUri(urlLonga)) {
     try {
-      let url = await Url.findOne({ urlLoga });
+      let url = await Url.findOne({ urlLonga });
 
       if (url) {
         res.json(url);
